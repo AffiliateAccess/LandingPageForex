@@ -21,7 +21,7 @@ const CardMarketingSource = (props) => {
 
         try {
 
-            return require('@src/assets/' + (name).toLowerCase() + '.jpg').default
+            return require('@src/assets/' + (name).toLowerCase() + '.svg').default
         }
         catch (error) {
             return require('@src/assets/betclic.jpg').default
@@ -34,15 +34,15 @@ const CardMarketingSource = (props) => {
             <CardHeader>
 
                 <Col md='12' className='text-center mt-1' >
-                    <img style={{ width: "38%", borderRadius: "50px" }} src={getImage(data.Advertiser_Name)} />
+                    <img style={{ width: "215px",height:'70px', borderRadius: "50px" }} src={getImage(data.Advertiser_Name)} />
                 </Col>
 
             </CardHeader>
             <CardBody >
 
-                <h3 className='fw-bolder text-primary'>Bonus di Benvenuto Sport fino a 100€</h3>
+                <h3 className='fw-bolder text-primary'>{data.Promo_Title}</h3>
                 {/* <h6 className='text-muted'>Malaysia</h6> */}
-                <p class="card-text">Il Bonus di Planetwin365 permetterà ai nuovi clienti di ricevere un Bonus deposito iniziale pari al 50% dell’importo del Deposito Qualificante iniziale fino ad un massimo di 100€. </p>
+                <p style={{minHeight: '80px'}} class="card-text">{data.Promo_Description} </p>
                 {/* <hr className='mb-2' /> */}
                 <br></br>
                 <div className='d-flex justify-content-between align-items-center'>
