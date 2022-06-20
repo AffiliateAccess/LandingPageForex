@@ -48,7 +48,7 @@ const Home = () => {
     <div className='mt-4 mx-5' >
 
       <div class="text-center ">
-        <h1 className='text-primary display-5 fw-bolder'>Bonus Welcome Comparator</h1>
+        <h1 className='text-primary display-5 fw-bolder'>Forex Comparator</h1>
         <CardText className='mb-5 mt-2'>
 
           <p class=" text-center">Ecco il tuo comparatore bonus definitivo e aggiornato.</p>
