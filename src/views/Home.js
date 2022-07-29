@@ -72,11 +72,11 @@ const Home = () => {
 
           <p class=" text-center">This is your new and updated forex welcome bonus comparator.</p>
 
-          <span class=" text-center">We do a comparison between the different welcome bonuses offered by the best online brokers.</span><br />
+          <span class=" text-center">Ecco quali sono i migliori broker forex scelti da Forexcomparator per i trader che vogliono iniziare ad investire sulle piattaforme forex regolamentate online più affidabili..</span><br />
           
-          <span class=" text-center small">Before joining please be aware that 79.9% of retail investor accounts lose money when trading CFDs. </span><br />
+          {/* <span class=" text-center mt-1 small">Before joining please be aware that 79.9% of retail investor accounts lose money when trading CFDs. </span><br />
           <span class=" text-center small">You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</span><br />
-          <span class=" text-center small">CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage.</span>
+          <span class=" text-center small">CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage.</span> */}
         </CardText>
 
       </div>
