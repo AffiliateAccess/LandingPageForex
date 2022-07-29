@@ -5,14 +5,32 @@ import UILoader from '@components/ui-loader'
 import { useState, useEffect, useNavigate } from 'react'
 import { useParams } from 'react-router-dom'
 import CardMarketingSource from './CardMarketingSource'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
+// ** Styles
+import 'animate.css/animate.css'
+import '@styles/base/plugins/extensions/ext-component-sweet-alerts.scss'
+const MySwal = withReactContent(Swal)
 
 const Home = () => {
   const [block, setBlock] = useState(false)
   const [data, setData] = useState([])
   const params = useParams()
 
-
+  const handleWarning = () => {
+    return MySwal.fire({
+      position: 'top',
+      title: 'Warning!',
+      text: ' Confirm to be over 18 years old ?',
+      icon: 'warning',
+      customClass: {
+        confirmButton: 'btn btn-primary'
+      },
+      buttonsStyling: false
+    })
+  }
+  
   const getData = async (id) => {
     setBlock(true)
     try {
@@ -25,7 +43,8 @@ const Home = () => {
     }
   }
   useEffect(() => {
-    getData(params.id)
+    getData(params.id),
+    handleWarning()
   }, [])
 
   const renderWishlist = (data) => {
@@ -51,10 +70,13 @@ const Home = () => {
         <h1 className='text-primary display-5 fw-bolder'>Forex Comparator</h1>
         <CardText className='mb-5 mt-2'>
 
-          <p class=" text-center">Ecco il tuo comparatore bonus definitivo e aggiornato.</p>
+          <p class=" text-center">This is your new and updated forex welcome bonus comparator.</p>
 
-          <span class=" text-center">Confrontiamo i bonus di benvenuto dei vari operatori di gioco online con regolare licenza aams.</span><br />
-          <span class=" text-center">Oltre ai bonus è possibile trovare altre informazioni per conoscere meglio la sala e scegliere cosi tra una vasta offerta di possibilitá.</span>
+          <span class=" text-center">We do a comparison between the different welcome bonuses offered by the best online brokers.</span><br />
+          
+          <span class=" text-center small">Before joining please be aware that 79.9% of retail investor accounts lose money when trading CFDs. </span><br />
+          <span class=" text-center small">You should consider whether you understand how CFDs work and whether you can afford to take the high risk of losing your money.</span><br />
+          <span class=" text-center small">CFDs are complex instruments and come with a high risk of losing money rapidly due to leverage.</span>
         </CardText>
 
       </div>

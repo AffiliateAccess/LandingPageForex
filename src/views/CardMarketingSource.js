@@ -21,7 +21,7 @@ const CardMarketingSource = (props) => {
 
         try {
 
-            return require('@src/assets/' + (name).toLowerCase() + '.svg').default
+            return require('@src/assets/' + (name).toLowerCase() + '.jpg').default
         }
         catch (error) {
             return require('@src/assets/betclic.jpg').default
@@ -47,7 +47,7 @@ const CardMarketingSource = (props) => {
                 <br></br>
                 <div className='d-flex justify-content-between align-items-center'>
                     <div>
-                        <a href={data.Shortlink}>
+                        <a href={data.Tracklink}>
                          <Button color='gradient-primary'>Verifica Offerta</Button>
                         </a>
                       

@@ -10,6 +10,7 @@ const DefaultRoute = '/default'
 const Routes = [
   {
     path: '/:id?',
+    exact: false,
     component: lazy(() => import('../../views/Home'))
   },
   {
@@ -17,18 +18,23 @@ const Routes = [
     component: lazy(() => import('../../views/Home'))
   },
   {
-    path: '/login',
-    component: lazy(() => import('../../views/Login')),
-    layout: 'BlankLayout',
-    meta: {
-      authRoute: true
-    }
-  },
-  {
-    path: '/error',
-    component: lazy(() => import('../../views/Error')),
-    layout: 'BlankLayout'
+    path: '/faq/:type?',
+    exact: true,
+    component: lazy(() => import('../../views/faq'))
   }
+  // {
+  //   path: '/login',
+  //   component: lazy(() => import('../../views/Login')),
+  //   layout: 'BlankLayout',
+  //   meta: {
+  //     authRoute: true
+  //   }
+  // },
+  // {
+  //   path: '/faq',
+  //   component: lazy(() => import('../../views/Error')),
+  //   layout: 'BlankLayout'
+  // }
 ]
 
 export { DefaultRoute, TemplateTitle, Routes }
